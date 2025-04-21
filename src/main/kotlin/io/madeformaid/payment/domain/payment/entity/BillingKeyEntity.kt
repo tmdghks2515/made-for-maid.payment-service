@@ -29,7 +29,8 @@ class BillingKeyEntity(
         @Column(name = "cafe_id")
         val cafeId: String? = null,
 
-        @Column(name = "billing_type", nullable = false)
+        @Column(name = "billing_type", nullable = false, columnDefinition = "varchar(100)")
+        @Enumerated(EnumType.STRING)
         val billingType: BillingType,
 
         @Column(name = "billing_key", nullable = false)
@@ -38,7 +39,7 @@ class BillingKeyEntity(
         @Column(name = "customer_key", nullable = false)
         val customerKey: String,
 
-        @Column(name = "issuer", nullable = false)
+        @Column(name = "issuer", nullable = false, columnDefinition = "varchar(100)")
         @Enumerated(EnumType.STRING)
         val issuer: PGType,
 
