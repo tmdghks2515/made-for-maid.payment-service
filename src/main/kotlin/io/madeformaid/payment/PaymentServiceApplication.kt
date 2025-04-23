@@ -1,7 +1,7 @@
 package io.madeformaid.payment
 
-import io.madeformaid.shared.context.EnableAuthContext
-import io.madeformaid.shared.exception.EnableGlobalExceptionHandling
+import io.madeformaid.webmvc.context.EnableAuthContext
+import io.madeformaid.webmvc.exception.EnableGlobalExceptionHandling
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

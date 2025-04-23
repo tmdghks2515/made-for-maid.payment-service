@@ -2,8 +2,8 @@ package io.madeformaid.payment.domain.payment.entity
 
 import io.madeformaid.payment.domain.payment.vo.enums.BillingType
 import io.madeformaid.payment.domain.payment.vo.enums.PGType
-import io.madeformaid.shared.jpa.entity.BaseEntity
-import io.madeformaid.shared.jpa.idGenerator.ShortId
+import io.madeformaid.webmvc.jpa.entity.BaseEntity
+import io.madeformaid.webmvc.jpa.idGenerator.ShortId
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.EnumType
@@ -26,8 +26,8 @@ class BillingKeyEntity(
         @Column(name = "user_id")
         val userId: String? = null,
 
-        @Column(name = "cafe_id")
-        val cafeId: String? = null,
+        @Column(name = "shop_id")
+        val shopId: String? = null,
 
         @Column(name = "billing_type", nullable = false, columnDefinition = "varchar(100)")
         @Enumerated(EnumType.STRING)
@@ -60,6 +60,6 @@ class BillingKeyEntity(
                 authenticatedAt = LocalDateTime.now(),
                 issuer = PGType.TOSS,
                 rawResponse = "",
-                billingType = BillingType.USER_CAFE_PASS,
+                billingType = BillingType.USER_SHOP_PASS,
         )
 }
