@@ -38,3 +38,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+gradle.properties
+http-client.private.env.json
